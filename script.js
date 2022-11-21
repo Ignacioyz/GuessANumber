@@ -23,13 +23,6 @@ const showLoseGif = () => {
     "https://www.icegif.com/wp-content/uploads/icegif-76.gif";
 };
 
-const handleEmptyGif = () => {
-  document.querySelector(".gif").src =
-    "https://novellivesdotcom.files.wordpress.com/2019/07/tenor.gif?resize=426%2C218";
-  setTimeout(() => {
-    (document.querySelector(".gif").src = ""), 3000;
-  });
-};
 
 // function that takes in a "message", and handles different DOM messages
 function handleMessage(message) {
@@ -45,7 +38,6 @@ guessBtn.addEventListener("click", () => {
   //   When there's no input
   if (!userGuess) {
     handleMessage("🧐 Input a number!"), handleEmptyGif();
-    handleEmptyGif();
   }
   //   When player wins
   else if (userGuess === answer) {
